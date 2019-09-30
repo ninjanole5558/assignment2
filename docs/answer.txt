@@ -5,3 +5,70 @@ Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+
+-------------------------------------------------------------------------------
+(a)
+csmit@Caleb-Lenovo MINGW64 ~/Documents/GitHub/assignment2 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ninjanole5558/assignment2.git
+   6a49515..1e923d2  master -> master
+-------------------------------------------------------------------------------
+(b)
+ 9 commits have been done
+ git log or git shortlog
+-------------------------------------------------------------------------------
+(c)
+$ git log .gitignore
+
+commit e424a923e80da4772ca789591ef3326230062a71
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:13:30 2019 -0400
+
+    -> Tracking .gitignore
+-------------------------------------------------------------------------------
+(d)
+branches are used to separate tasks into more focused area, they are also used
+so programmers can independently work on a particular feature without worry of
+other parts of the code changing
+-------------------------------------------------------------------------------
+(e)
+the difference between git log and git status is that git log only shows
+committed work while git status shows working directory and staging area
+-------------------------------------------------------------------------------
+(f)
+git log Vehicle.h
+--------------------------------------------------------------------------------
+(g)
+git log --grep=file
+--------------------------------------------------------------------------------
+(h)
+  I) Polymorphism is a programs ability to distinguish a function call based on
+    data type or parameters instead of by name
+  II) Inheritance is the relationship between two classes where one has the
+    characteristics of the other. (ex: a Bike is a Vehicle)
+  III) Encapsulation is how a programmer puts like data together such as in
+    library, class or other object
+
+--------------------------------------------------------------------------------
+(i)
+Dictator and Lieutenants workflow has more repositories, the Lieutenant
+repositories solves some Integration conflicts between some developers, then the
+Dictator finishes solving remaining Integration conflicts between the Lieutenant
+repositories
+
+Integration manager solves all Integration conflicts before pushing into the
+blessed repository.
+-------------------------------------------------------------------------------
+(j)
+A team of 100 developers would benefit from Dictator and Lieutenant workflow
+because there will be several integration conflicts and some can be solved before
+being pushed to the final repository before the blessed one. In the Centralized
+workflow each developer would have to fix conflicts themselves which would take
+up a lot of their time because of the number of merges going on at once
