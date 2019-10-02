@@ -9,12 +9,10 @@ private:
     int numberOfEngines;
 
 public:
-    explicit Jet(string brand, string model, int gearCount = 1);
+    explicit Jet(string brand, string model, int numberOfEngines = 1);
 
     virtual ~Jet();
-
     virtual double mileageEstimate(double time);
-
     virtual string toString();
 };
 

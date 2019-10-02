@@ -3,18 +3,15 @@
 
 #include "Vehicle.h"
 
-class Scooter : public Vehicle {
+class Scooter : public PoweredVehicle {
 
 private:
-    int mileage;
 
 public:
-    explicit Scooter(string brand, string model, int gearCount = 1);
+    explicit Scooter(string brand, string model);
 
     virtual ~Scooter();
-
     virtual double mileageEstimate(double time);
-
     virtual string toString();
 };
 
