@@ -3,15 +3,17 @@
 
 #include "Vehicle.h"
 
-class Jet : public Vehicle {
+class Jet : public PoweredVehicle {
 
 private:
     int numberOfEngines;
 
 public:
-    explicit Jet(string brand, string model, int numberOfEngines = 1);
+    explicit Jet(string brand, string model, int numEngines = 1);
 
     virtual ~Jet();
+    void setNumEngines(int engines);
+    int getNumEngines();
     virtual double mileageEstimate(double time);
     virtual string toString();
 };

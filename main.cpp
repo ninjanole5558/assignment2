@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Car.h"
 #include "Bicycle.h"
+#include "Jet.h"
 
 void printVehiclesRoster(Vehicle **vehicles, int size);
 
@@ -16,6 +17,8 @@ int main() {
     vehiclesArray[3] = new Car("Tesla", "T2", "electricity", "large");
     vehiclesArray[4] = new Bicycle("Mizuno", "Wave", 10);
     vehiclesArray[5] = new Car("BMW", "X5", "diesel", "grande");
+    vehiclesArray[6] = new Jet("Boeing", "767", 4);
+    vehiclesArray[7] = new Jet("Cesna", "Prop", 1);
 
     printVehiclesRoster(vehiclesArray, size);
 
