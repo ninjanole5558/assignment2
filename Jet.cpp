@@ -1,6 +1,7 @@
 #include "Jet.h"
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
 Jet::Jet(string brand, string model, int numEngines)
 {
@@ -31,9 +32,11 @@ int Jet::getNumEngines()
 
 double Jet::mileageEstimate(double timed)
 {
-  srand(time(0));
   double mileage = floor((rand() % 60) + 40)*timed;  //40-100mpm
-  mileage += mileage + (mileage * (numberOfEngines-1) * 0.055); //%5.5 increase per engine
+  if(getFuelType()=="Rocket")
+    mileage += (mileage * (numberOfEngines) * 0.055); //%5.5 increase per engine
+  
+  return mileage;
 
 }
 

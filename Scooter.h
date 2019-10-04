@@ -1,7 +1,8 @@
 #ifndef DRIVINGSIMULATOR_SCOOTER_H
 #define DRIVINGSIMULATOR_SCOOTER_H
 
-#include "Vehicle.h"
+#include "PoweredVehicle.h"
+#include <cstdlib>
 
 class Scooter : public PoweredVehicle {
 

@@ -1,3 +1,5 @@
+#include "Scooter.h"
+
 
 Scooter::Scooter(string brand, string model)
 {
@@ -13,9 +15,11 @@ double Scooter::mileageEstimate(double time)
   mileage = (rand() % 40 + 1) * time;
   if(time > 30)
     mileage = mileage * 0.75;
+  
+  return mileage;
 }
 string Scooter::toString()
 {
-  string s = "-> Scooter\n\t" + Vehicle::toString();
+  string s = "-> Scooter\n" + Vehicle::toString();
   return s;
 }

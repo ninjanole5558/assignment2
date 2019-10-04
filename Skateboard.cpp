@@ -1,3 +1,5 @@
+#include "Skateboard.h"
+#include <cmath>
 
 Skateboard::Skateboard(string brand, string model)
 {
@@ -9,14 +11,15 @@ Skateboard::~Skateboard() = default;
 
 double Skateboard::mileageEstimate(double time)
 {
-  srand(time(0));
-  double mileage = rand() % 0.4 + 0.1;
-  if(time => 25 && time =< 250)
-    mileage = time % (time / 3) + 1;
+  double mileage = (rand() % 4 + 1)/10.0; //.1 to .4
+  if(time >= 25 && time <= 250)
+    mileage = (int)time % (int)(time / 3) + 1;
+  
+  return mileage;
 }
 string Skateboard::toString()
 {
-  string s = "-> Skateboard\n\t" + Vehicle::toString();
+  string s = "-> Skateboard\n" + Vehicle::toString();
   return s;
 
 }
