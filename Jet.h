@@ -1,7 +1,8 @@
 #ifndef DRIVINGSIMULATOR_JET_H
 #define DRIVINGSIMULATOR_JET_H
 
-#include "Vehicle.h"
+#include "PoweredVehicle.h"
+#include <cmath>
 
 class Jet : public PoweredVehicle {
 
@@ -14,7 +15,7 @@ public:
     virtual ~Jet();
     void setNumEngines(int engines);
     int getNumEngines();
-    virtual double mileageEstimate(double time);
+    virtual double mileageEstimate(double timed);
     virtual string toString();
 };
 
